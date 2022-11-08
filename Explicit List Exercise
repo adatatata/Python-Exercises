@@ -1,0 +1,21 @@
+listas = [3, 5, 1, 7, 9, 2, 9, 6, 8]
+lista_aux = []
+lista_aux.append(next(reversed(listas)))
+listas.pop()
+if listas.count(max(listas)) >= 1:
+    listas.remove(max(listas))
+    lista_aux.append(max(listas))
+lista_aux.insert(0, (min(listas)))
+listas.remove(min(listas))
+if next(reversed(listas)) > listas[0]:
+    listas.reverse()
+listas.insert(min(listas), listas[0])
+listas.insert(listas[0], min(listas))
+listas.remove(listas[0])
+listas.remove(listas.index(2, (min(listas))))
+
+if 2 in listas:
+    listas.remove(2)
+    lista_aux.append(2)
+lista_aux.append(list(reversed(range(1, 11))))
+print("lista"+str(listas)+"\nLista_aux" + str(lista_aux))
